@@ -8,3 +8,5 @@
 - HCL File
 - Terraform init
 - Save Terraform State on S3
+- Starting my first EC2 Instance with Terraform
+- Understanding the expressions and console
