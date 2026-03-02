@@ -4,3 +4,7 @@
 - Basics to Terraform
 - AWS IAM
 - AWS S3
+- AWS AZs and Multi-Region
+- HCL File
+- Terraform init
+- Save Terraform State on S3
