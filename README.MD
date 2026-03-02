@@ -5,7 +5,7 @@
 - AWS IAM
 - AWS S3
 - AWS AZs and Multi-Region
-- HCL File
+- Understading HCL
 - Terraform init
 - Save Terraform State on S3
 - Starting my first EC2 Instance with Terraform
