@@ -22,7 +22,13 @@ data "aws_ami" "ubuntu" {
 resource "aws_instance" "ubuntu_teste" {
     ami = data.aws_ami.ubuntu.id
     instance_type = "t3.micro"
-
+  credit_specification {
+    cpu_credits = "standard"
+  }
+  root_block_device {
+    volume_size = 20
+    volume_type = "gp3"
+  }
     tags = {
         Name = "ec2-teste-ubuntu"
     }
