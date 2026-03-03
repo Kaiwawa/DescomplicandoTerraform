@@ -12,3 +12,11 @@
 - Understanding the expressions and console
 - Using provider with alias and Deploying with muliple providers
 - Using variables and validation
+- State locking
+
+
+
+- Don't waste your credits:
+> credit_specification {
+>  cpu_credits = "standard"
+> }
