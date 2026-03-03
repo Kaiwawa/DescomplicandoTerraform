@@ -12,17 +12,15 @@ data "aws_ami" "ubuntu-east" {
 }
 
 // Last ubuntu version on west
-data "aws_ami" "ubuntu-west" {
-  most_recent = true
-  provider = aws.west
- 
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-  
-  owners = ["099720109477"]
-}
+# data "aws_ami" "ubuntu-west" {
+#   most_recent = true
+#   provider = aws.west
+#   filter {
+#     name   = "name"
+#     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+#   }
+#   owners = ["099720109477"]
+# }
 
 // Resource on AWS East
 resource "aws_instance" "ubuntu_teste_east" {
@@ -36,15 +34,15 @@ resource "aws_instance" "ubuntu_teste_east" {
 }
 
 // Resource on AWS West
-resource "aws_instance" "ubuntu_teste_west" {
-    provider = aws.west
-    ami = data.aws_ami.ubuntu-west.id
-    instance_type = "t3.micro"
+# resource "aws_instance" "ubuntu_teste_west" {
+#     provider = aws.west
+#     ami = data.aws_ami.ubuntu-west.id
+#     instance_type = "t3.micro"
 
-    tags = {
-        Name = "ec2-teste-ubuntu-w"
-    }
-}
+#     tags = {
+#         Name = "ec2-teste-ubuntu-w"
+#     }
+# }
 
 # // Resource on GCP
 # resource "gcp_instance" "name" {
